@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Erick Rodrigo, desenvolvedor front-end em formação: landing pages e sites responsivos."
+    />
+    <title>Portfólio | Erick Rodrigo - Front-End</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#inicio" class="logo">Erick</a>
+
+      <button class="menu-icon" type="button" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <nav>
+        <a href="#inicio" class="active">Início</a>
+        <a href="#sobre">Sobre Mim</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="inicio" id="inicio">
+        <div class="inicio-img">
+          <img src="./Logo.jpg" alt="Foto de Erick Rodrigo" />
+        </div>
+        <div class="home-content">
+          <h1>Olá, eu sou <span>Erick Rodrigo</span></h1>
+          <h2 class="typing-text">Eu sou <span></span></h2>
+          <p>
+            Sou desenvolvedor front-end, apaixonado por tecnologia, design e
+            inovação. Valorizo a criatividade, a responsabilidade e o
+            aprendizado contínuo. Busco transformar ideias em interfaces
+            modernas, intuitivas e funcionais, sempre com foco na qualidade, na
+            experiência do usuário e na evolução profissional.
+          </p>
+          <!-- Troque os "#" pelos links dos seus perfis -->
+          <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="X (Twitter)"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+          <a href="#contato" class="btn">Contrate-me</a>
+        </div>
+      </section>
+
+      <section class="secao" id="sobre">
+        <h2 class="titulo">Sobre <span>mim</span></h2>
+        <p>
+          Trabalho com manutenção de celulares e computadores e estou
+          aprendendo desenvolvimento front-end. Crio landing pages e sites
+          simples, responsivos e fáceis de usar, em HTML e CSS.
+        </p>
+      </section>
+
+      <section class="secao" id="cursos">
+        <h2 class="titulo"><span>Cursos</span></h2>
+        <ul class="lista-cursos">
+          <li>
+            Transforme-se, programa PROA com o Serasa
+            <small>Em andamento</small>
+          </li>
+        </ul>
+      </section>
+
+      <section class="secao" id="projetos">
+        <h2 class="titulo"><span>Projetos</span></h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Landing Page Plot Bot</h3>
+            <p>
+              Página de apresentação de um bot de moderação para Discord, com
+              chamadas para ação e layout responsivo.
+            </p>
+            <p class="tags">HTML · CSS · Projeto de estudo</p>
+          </article>
+          <article class="card">
+            <h3>Tela de Login PlotCell</h3>
+            <p>
+              Formulário de login com ícones, fundo com efeito de vidro e
+              adaptação para celular.
+            </p>
+            <p class="tags">HTML · CSS · Projeto de estudo</p>
+          </article>
+          <article class="card">
+            <h3>Este portfólio</h3>
+            <p>
+              Site pessoal com animação de texto em CSS, menu para celular e
+              seções de apresentação.
+            </p>
+            <p class="tags">HTML · CSS · JavaScript · Projeto de estudo</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao" id="contato">
+        <h2 class="titulo">Vamos <span>conversar?</span></h2>
+        <p>
+          Precisa de uma landing page ou de um site simples para o seu negócio?
+          Me chame por uma das redes abaixo.
+        </p>
+        <div class="social-icons">
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="#" aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Erick Rodrigo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      const nav = document.querySelector("nav");
+      const botaoMenu = document.querySelector(".menu-icon");
+      const links = document.querySelectorAll("nav a");
+
+      botaoMenu.addEventListener("click", () => nav.classList.toggle("active"));
+
+      links.forEach((link) =>
+        link.addEventListener("click", () => nav.classList.remove("active")),
+      );
+
+      const secoes = document.querySelectorAll("main section[id]");
+      const observador = new IntersectionObserver(
+        (entradas) => {
+          entradas.forEach((entrada) => {
+            if (!entrada.isIntersecting) return;
+            links.forEach((link) =>
+              link.classList.toggle(
+                "active",
+                link.getAttribute("href") === "#" + entrada.target.id,
+              ),
+            );
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" },
+      );
+      secoes.forEach((secao) => observador.observe(secao));
+    </script>
+  </body>
+</html>
