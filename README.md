@@ -8,7 +8,7 @@ Meu site pessoal de desenvolvedor front-end.
 
 - Apresentação com foto e texto animado em CSS
 - Seções Sobre mim, Cursos, Projetos e Contato
-- Menu de navegação que muda de destaque conforme a rolagem
+- Menu de navegação com rolagem suave até cada seção
 - Menu para celular (botão que abre e fecha)
 - Layout responsivo
 
@@ -16,7 +16,7 @@ Meu site pessoal de desenvolvedor front-end.
 
 - HTML5
 - CSS3 (flexbox, grid, animações e `@media` queries)
-- JavaScript básico (menu do celular e destaque do menu)
+- JavaScript básico (abrir e fechar o menu no celular)
 - Font Awesome e Google Fonts (Poppins)
 
 ## Como rodar
