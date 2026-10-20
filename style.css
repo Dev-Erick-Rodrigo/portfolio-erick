@@ -35,7 +35,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(6px);
   z-index: 100;
 }
