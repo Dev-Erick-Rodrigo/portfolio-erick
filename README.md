@@ -2,7 +2,7 @@
 
 Meu site pessoal de desenvolvedor front-end.
 
-🔗 **Ver ao vivo:** https://Dev-Erick-Rodrigo.github.io/portfolio-erick/
+**Ver ao vivo:** https://Dev-Erick-Rodrigo.github.io/portfolio-erick/
 
 ## O que tem no site
 
