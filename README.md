@@ -9,7 +9,6 @@ Meu site pessoal de desenvolvedor front-end.
 - Apresentação com foto e texto animado em CSS
 - Seções Sobre mim, Cursos, Projetos e Contato
 - Menu de navegação com rolagem suave até cada seção
-- Menu para celular (botão que abre e fecha)
 - Layout responsivo
 
 ## Tecnologias
