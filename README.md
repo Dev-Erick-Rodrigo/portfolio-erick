@@ -16,7 +16,6 @@ Meu site pessoal de desenvolvedor front-end.
 
 - HTML5
 - CSS3 (flexbox, grid, animações e `@media` queries)
-- JavaScript básico (abrir e fechar o menu no celular)
 - Font Awesome e Google Fonts (Poppins)
 
 ## Como rodar
