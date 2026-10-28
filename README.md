@@ -15,7 +15,7 @@ Meu site pessoal de desenvolvedor front-end.
 ## Tecnologias
 
 - HTML5
-- CSS3 (flexbox, grid, animações e `@media` queries)
+- CSS3 (flexbox, animações e `@media` queries)
 - Font Awesome e Google Fonts (Poppins)
 
 ## Como rodar
